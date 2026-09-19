@@ -1,0 +1,92 @@
+const foods = [
+  {
+    id: 'pork',
+    name: 'THỊT LỢN',
+    price: 13000,
+    unit: '100g',
+    portionFactor: 1,
+    quantity: 0,
+    calories: 139,
+    protein: 19,
+    lipid: 7,
+    glucid: 0,
+    calcium: 6.7,
+    image: 'image005.png',
+  },
+  {
+    id: 'egg',
+    name: 'TRỨNG GÀ',
+    price: 6000,
+    unit: 'quả',
+    portionFactor: 0.5,
+    quantity: 0,
+    calories: 132,
+    protein: 12.7,
+    lipid: 8.1,
+    glucid: 1.8,
+    calcium: 55,
+    image: 'image007.png',
+  },
+  {
+    id: 'tofu',
+    name: 'ĐẬU PHỤ',
+    price: 3000,
+    unit: '100g',
+    portionFactor: 1,
+    quantity: 0,
+    calories: 97,
+    protein: 10.9,
+    lipid: 5.4,
+    glucid: 1.1,
+    calcium: 24,
+    image: 'image001.png',
+  },
+  {
+    id: 'vegetable',
+    name: 'RAU XANH',
+    price: 2000,
+    unit: '100g',
+    portionFactor: 1,
+    quantity: 0,
+    calories: 28,
+    protein: 3.2,
+    lipid: 0.2,
+    glucid: 3.2,
+    calcium: 100,
+    image: 'image003.png',
+  },
+  {
+    id: 'rice',
+    name: 'GẠO TẺ',
+    price: 2200,
+    unit: '100g',
+    portionFactor: 1,
+    quantity: 0,
+    calories: 346,
+    protein: 7.9,
+    lipid: 1,
+    glucid: 76.3,
+    calcium: 30,
+    image: 'image009.png',
+  },
+];
+
+const targets = {
+  energy: 750,
+  protein: 25,
+  lipid: 18,
+  glucid: 100,
+  calcium: 280,
+};
+
+const MIN_PORK_QUANTITY = 0.5;
+
+const STORAGE_KEY = 'nutrition-menu-state-v1';
+
+const storedDefaultState = [
+  { id: 'pork', quantity: 0, price: 13000 },
+  { id: 'egg', quantity: 0, price: 6000 },
+  { id: 'tofu', quantity: 0, price: 3000 },
+  { id: 'vegetable', quantity: 0, price: 2000 },
+  { id: 'rice', quantity: 0, price: 2200 },
+];

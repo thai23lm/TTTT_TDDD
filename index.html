@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực Đơn Dinh Dưỡng</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="top-banner">
+        <div class="header-wrap">
+          <div class="icon-badge" aria-hidden="true">🥗</div>
+          <div>
+            <h1>THỰC ĐƠN DINH DƯỠNG</h1>
+            <p>Tùy chọn chi phí • Đảm bảo nhu cầu dinh dưỡng</p>
+          </div>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <section class="food-grid" id="foodGrid" aria-label="Danh sách thực phẩm"></section>
+
+        <div class="total-cost-panel">
+          <div class="total-cost-label">TỔNG CHI PHÍ:</div>
+          <div class="total-cost-value" id="totalCost">0 ₫</div>
+        </div>
+
+        <div class="actions-row">
+          <button id="completeMenuBtn" class="primary-btn" type="button">LÊN THỰC ĐƠN</button>
+          <button id="resetBtn" class="secondary-btn" type="button">ĐẶT LẠI</button>
+        </div>
+
+        <section class="nutrition-section" aria-label="Bảng dinh dưỡng">
+          <h2>DINH DƯỠNG</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Thực phẩm</th>
+                  <th>Tổng năng vào (Thực tế)</th>
+                  <th>Quan hệ</th>
+                  <th>Chuẩn tối thiểu</th>
+                  <th>Trạng thái</th>
+                </tr>
+              </thead>
+              <tbody id="nutritionTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="nutrition-section" aria-label="Kết quả thực đơn tối ưu">
+          <h2>CHI PHÍ BỮA ĂN TỐI ƯU</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Thực phẩm</th>
+                  <th>Giá / 100g</th>
+                  <th>Lượng tối ưu</th>
+                  <th>Thành tiền</th>
+                  <th>ĐVT</th>
+                </tr>
+              </thead>
+              <tbody id="resultTableBody">
+                <tr>
+                  <td colspan="5">Chưa có thực đơn nào được tính.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
